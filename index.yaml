@@ -3,12 +3,12 @@ entries:
   namespace-default:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-12T00:52:51.641554246+02:00"
+    created: "2023-10-13T10:22:57.328042727+02:00"
     description: A Helm chart for deploying pflegede defaults objects into your namespace
-    digest: aadaa620cfb701371569073452d908a21d50f7845ed6c5cd1d51dd51d5a2417f
+    digest: ab2643f831408e09c20708074643801f520cb58babc3ba3aff7250164c73ff7a
     name: namespace-default
     type: application
     urls:
-    - https://github.com/SaschaSchuenemannPflegede/argo-kustomize-helm-test/releases/download/namespace-default-0.1.0/namespace-default-0.1.0.tgz
-    version: 0.1.0
-generated: "2023-10-12T00:52:51.641569844+02:00"
+    - namespace-default-0.1.1.tgz
+    version: 0.1.1
+generated: "2023-10-13T10:22:57.328062103+02:00"
