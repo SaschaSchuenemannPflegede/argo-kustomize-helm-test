@@ -8,11 +8,11 @@ commonLabels:
 resources: 
   - base/namespace.yaml
 
-#helmCharts:
-#  - name: namespace-default
-#    valuesInline:
-#      namespace: ecr-helm
-#      ecrJob:
-#        enabled: false
-#    repo: https://raw.githubusercontent.com/SaschaSchuenemannPflegede/argo-kustomize-helm-test/master/
-#    releaseName: namespace-default-0.1.1
+helmCharts:
+  - name: namespace-default
+    valuesInline:
+      namespace: ecr-helm
+      ecrJob:
+        enabled: false
+    repo: https://raw.githubusercontent.com/SaschaSchuenemannPflegede/argo-kustomize-helm-test/master/
+    releaseName: namespace-default-0.1.1
