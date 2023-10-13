@@ -1,4 +1,44 @@
 apiVersion: v1
 kind: Namespace
 metadata:
+  labels:
+    app.kubernetes.io/component: service
+    app.kubernetes.io/instance: ns-default-test
+    app.kubernetes.io/managed-by: argocd
+    app.kubernetes.io/part-of: ns-default-test
   name: ecr-helm
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  labels:
+    app.kubernetes.io/component: service
+    app.kubernetes.io/instance: ns-default-test
+    app.kubernetes.io/managed-by: argocd
+    app.kubernetes.io/part-of: ns-default-test
+  name: argocd-resource-quota
+spec:
+  hard:
+    limits.cpu: "2"
+    limits.memory: 2Gi
+    requests.cpu: "1"
+    requests.memory: 1Gi
+---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  labels:
+    app.kubernetes.io/component: service
+    app.kubernetes.io/instance: ns-default-test
+    app.kubernetes.io/managed-by: argocd
+    app.kubernetes.io/part-of: ns-default-test
+  name: argocd-limit-range
+spec:
+  limits:
+  - max:
+      cpu: "2"
+      memory: 2Gi
+    min:
+      cpu: "0.5"
+      memory: 128Mi
+    type: Container
