@@ -3,7 +3,7 @@ apiVersion: builtin
 kind: HelmChartInflationGenerator
 metadata:
   name: pflegede-namespace-defaults
-name: pflegede-namespace-defaults
+name: namespace-default
 repo: https://raw.githubusercontent.com/SaschaSchuenemannPflegede/argo-kustomize-helm-test/master/
 version: 0.1.1
 releaseName: namespace-default
