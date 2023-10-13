@@ -9,3 +9,6 @@ resources:
   - base/namespace.yaml
 #  - base/namespace-defaults.yaml
 
+generators:
+  - base/namespace-defaults.yaml
+
