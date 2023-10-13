@@ -7,3 +7,13 @@ commonLabels:
   app.kubernetes.io/part-of: ns-default-test
 resources: 
   - base/namespace.yaml
+ # - base/namespace-default-chart.yaml
+
+helmCharts:
+  - name: namespace-default
+    valuesInline:
+      namespace: ecr-helm
+      ecrJob:
+        enabled: false
+    repo: https://raw.githubusercontent.com/SaschaSchuenemannPflegede/argo-kustomize-helm-test/master/
+    releaseName: namespace-default-0.1.1
