@@ -3,6 +3,9 @@ kind: Kustomization
 bases:
   - ../../application
 
+
+patchesStrategicMerge:
+  - values.yaml
 #helmCharts:
 #  - name: namespace-default
 #    valuesInline:
