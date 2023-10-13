@@ -1,0 +1,11 @@
+# helm-chart.yaml
+apiVersion: builtin
+kind: HelmChartInflationGenerator
+metadata:
+  name: pflegede-namespace-defaults
+name: minecraft
+repo: https://raw.githubusercontent.com/SaschaSchuenemannPflegede/argo-kustomize-helm-test/master/
+version: 0.1.1
+releaseName: namespace-default
+namespace: ecr-helm
+IncludeCRDs: true
