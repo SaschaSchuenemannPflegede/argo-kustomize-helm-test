@@ -1,3 +1,0 @@
-namespace: ecr-helm
-ecrJob:
-  enabled: false

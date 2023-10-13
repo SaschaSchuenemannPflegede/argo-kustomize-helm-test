@@ -4,13 +4,11 @@ bases:
   - ../../application
 
 
-patchesStrategicMerge:
-  - values.yaml
-#helmCharts:
-#  - name: namespace-default
-#    valuesInline:
-#      namespace: ecr-helm
-#      ecrJob:
-#        enabled: false
-#    repo: https://raw.githubusercontent.com/SaschaSchuenemannPflegede/argo-kustomize-helm-test/master/
-#    releaseName: namespace-default-0.1.1
+helmCharts:
+  - name: namespace-default
+    valuesInline:
+      namespace: ecr-helm
+      ecrJob:
+        enabled: true
+    repo: https://saschaschuenemannpflegede.github.io/helmcharttest/
+    releaseName: namespace-default-0.1.3
