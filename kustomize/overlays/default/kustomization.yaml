@@ -4,11 +4,3 @@ bases:
   - ../../application
 
 
-helmCharts:
-  - name: namespace-default
-    valuesInline:
-      namespace: ecr-helm
-      ecrJob:
-        enabled: true
-    repo: https://saschaschuenemannpflegede.github.io/helmcharttest/
-    releaseName: namespace-default-0.1.3

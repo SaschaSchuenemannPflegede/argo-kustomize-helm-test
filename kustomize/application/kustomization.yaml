@@ -7,16 +7,14 @@ commonLabels:
   app.kubernetes.io/part-of: ns-default-test
 resources: 
   - base/namespace.yaml
-#  - base/namespace-defaults.yaml
 
-#generators:
-#  - base/namespace-defaults.yaml
-
-#helmCharts:
-#  - name: namespace-default
-#    valuesInline:
-#      namespace: ecr-helm
-#      ecrJob:
-#        enabled: false
-#    repo: https://saschaschuenemannpflegede.github.io/helmcharttest/
-#    releaseName: namespace-default-0.1.3
+# outcomment if different configurations are desired for some environments
+# in this case copy and paste this into the overlay kustomization file for your environments
+helmCharts:
+  - name: namespace-default
+    valuesInline:
+      namespace: ecr-helm
+      ecrJob:
+        enabled: false
+    repo: https://saschaschuenemannpflegede.github.io/helmcharttest/
+    releaseName: namespace-default-0.1.3
