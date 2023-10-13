@@ -7,5 +7,5 @@ commonLabels:
   app.kubernetes.io/part-of: ns-default-test
 resources: 
   - base/namespace.yaml
-  - base/namespace-defaults.yaml
+#  - base/namespace-defaults.yaml
 
