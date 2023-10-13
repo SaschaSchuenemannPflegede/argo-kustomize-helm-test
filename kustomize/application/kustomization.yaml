@@ -14,6 +14,6 @@ resources:
 
 helmCharts:
   - name: namespace-default
-    valuesFile: values.yaml
+    valuesFile: base/values.yaml
     repo: https://saschaschuenemannpflegede.github.io/helmcharttest/
     releaseName: namespace-default-0.1.3
