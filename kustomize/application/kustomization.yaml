@@ -14,9 +14,6 @@ resources:
 
 helmCharts:
   - name: namespace-default
-    valuesInline:
-      namespace: ecr-helm
-      ecrJob:
-        enabled: false
+    valuesFile: values.yaml
     repo: https://saschaschuenemannpflegede.github.io/helmcharttest/
     releaseName: namespace-default-0.1.3
