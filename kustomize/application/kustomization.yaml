@@ -16,5 +16,7 @@ helmCharts:
       namespace: ecr-helm
       ecrJob:
         enabled: true
+      resourceQuota: # limit for aggregate resource consumption in the namespace
+        requestsCpu: "2"
     repo: https://saschaschuenemannpflegede.github.io/helmcharttest/
     releaseName: namespace-default-0.1.3
