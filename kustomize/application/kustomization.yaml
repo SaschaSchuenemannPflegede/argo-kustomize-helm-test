@@ -18,5 +18,6 @@ helmCharts:
         enabled: true
       resourceQuota: # limit for aggregate resource consumption in the namespace
         requestsCpu: "2"
-    repo: https://saschaschuenemannpflegede.github.io/helmcharttest/
-    releaseName: namespace-default-0.1.3
+    repo: https://pflege-de.github.io/k8s-namespace-defaults
+    releaseName: namespace-default
+    version: 1.0.10
