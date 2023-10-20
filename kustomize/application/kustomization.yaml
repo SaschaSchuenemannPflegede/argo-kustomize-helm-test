@@ -20,4 +20,4 @@ helmCharts:
         requestsCpu: "2"
     repo: https://pflege-de.github.io/k8s-namespace-defaults
     releaseName: namespace-default
-    version: 1.0.10
+    version: 1.0.4
