@@ -11,7 +11,7 @@ resources:
 # outcomment if different configurations are desired for some environments
 # in this case copy and paste this into the overlay kustomization file for your environments
 helmCharts:
-  - name: namespace-default
+  - name: namespace-defaults
     valuesInline:
       namespace: ecr-helm
       ecrJob:
