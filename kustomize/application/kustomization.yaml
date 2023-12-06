@@ -22,8 +22,8 @@ helmCharts:
       gitJob:
         enabled: true
         githubSshSecret: ssh-secret
-        repo_url: "git@github.com:pflege-de/awscli-kubectl.git"
+        repoUrl: "git@github.com:pflege-de/awscli-kubectl.git"
         branch: main
     repo: https://pflege-de.github.io/k8s-namespace-defaults
     releaseName: namespace-defaults
-    version: 1.1.4
+    version: 1.1.5
