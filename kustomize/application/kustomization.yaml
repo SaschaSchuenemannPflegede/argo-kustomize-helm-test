@@ -16,7 +16,6 @@ helmCharts:
       namespace: ecr-helm
       ecrJob:
         enabled: false
-        baseName: cb-inco-adapter-ecr
       resourceQuota: # limit for aggregate resource consumption in the namespace
         requestsCpu: "2"
       gitJob:
@@ -26,4 +25,4 @@ helmCharts:
         branch: main
     repo: https://pflege-de.github.io/k8s-namespace-defaults
     releaseName: namespace-defaults
-    version: 1.1.5
+    version: 1.1.6
