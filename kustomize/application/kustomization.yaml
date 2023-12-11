@@ -15,7 +15,7 @@ helmCharts:
     valuesInline:
       namespace: ecr-helm
       ecrJob:
-        enabled: false
+        enabled: true
       resourceQuota: # limit for aggregate resource consumption in the namespace
         requestsCpu: "2"
       gitJob:
