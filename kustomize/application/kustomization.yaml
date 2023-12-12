@@ -6,7 +6,7 @@ commonLabels:
   app.kubernetes.io/managed-by: argocd
   app.kubernetes.io/part-of: ns-default-test
 resources: 
-  - base/namespace.yaml
+ 
 
 # outcomment if different configurations are desired for some environments
 # in this case copy and paste this into the overlay kustomization file for your environments
