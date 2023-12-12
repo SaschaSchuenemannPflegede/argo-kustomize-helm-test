@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: {{ .Values.imageTag }}
+        image: imagename
