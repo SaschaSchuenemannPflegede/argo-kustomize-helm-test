@@ -6,6 +6,7 @@ commonLabels:
   app.kubernetes.io/managed-by: argocd
   app.kubernetes.io/part-of: ns-default-test
 resources: 
+ - base/deployment.yaml
  
 
 # outcomment if different configurations are desired for some environments
