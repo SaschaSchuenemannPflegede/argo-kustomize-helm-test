@@ -4,8 +4,8 @@ bases:
   - ../../application
 
 
-#patchesStrategicMerge:
-#- deployment.yaml
+patchesStrategicMerge:
+- deployment.yaml
 
 patches:
 - target:
@@ -17,4 +17,3 @@ patches:
       value: 1000      version: v1
       kind: LimitRange
       name: ecr-helm-limit-range
-  -path: deployment
