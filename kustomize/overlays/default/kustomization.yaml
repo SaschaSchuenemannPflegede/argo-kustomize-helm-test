@@ -6,3 +6,12 @@ bases:
 
 patches:
 - path: deployment.yaml
+- patch: |-
+    - op: replace
+      path: /spec:/limits/default/cpu
+      value: 1000      version: v1
+      kind: LimitRange
+      name: ecr-helm-limit-range
+  target:
+    kind: LimitRange
+    name: ecr-helm-limit-range
