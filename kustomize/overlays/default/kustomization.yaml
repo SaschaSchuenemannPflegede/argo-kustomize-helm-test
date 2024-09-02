@@ -1,5 +1,12 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+bases:
+  - ../../application
+
+
+patchesStrategicMerge:
+- deployment.yaml
+
 patches:
 - target:
     kind: LimitRange
@@ -7,8 +14,7 @@ patches:
   patch: |-
     - op: replace
       path: /spec:/limits/default/cpu
-      value: 1000
-- path: deployment.yaml
+      value: 1000      version: v1
+      kind: LimitRange
+      name: ecr-helm-limit-range
 
-resources:
-- deployment.yaml
