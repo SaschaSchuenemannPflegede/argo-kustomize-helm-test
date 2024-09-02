@@ -17,4 +17,4 @@ patches:
       value: 1000      version: v1
       kind: LimitRange
       name: ecr-helm-limit-range
-- path: deployment
+  -path: deployment
