@@ -9,7 +9,6 @@ patchesStrategicMerge:
 
 patches:
  - target:
-      version: v1
       kind: LimitRange
       name: ecr-helm-limit-range
    path: limit-patch.yaml
