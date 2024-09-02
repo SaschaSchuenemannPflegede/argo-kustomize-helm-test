@@ -4,5 +4,5 @@ bases:
   - ../../application
 
 
-patchesStrategicMerge:
-- deployment.yaml
+patches:
+- path: deployment.yaml
