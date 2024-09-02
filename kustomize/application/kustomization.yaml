@@ -1,29 +1,29 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-commonLabels:
-  app.kubernetes.io/component: service
-  app.kubernetes.io/instance: ns-default-test
-  app.kubernetes.io/managed-by: argocd
-  app.kubernetes.io/part-of: ns-default-test
-resources: 
- - base/deployment.yaml
- 
-
+resources:
+- base/deployment.yaml
 # outcomment if different configurations are desired for some environments
 # in this case copy and paste this into the overlay kustomization file for your environments
 helmCharts:
-  - name: namespace-defaults
-    valuesInline:
-      namespace: ecr-helm
-      ecrJob:
-        enabled: true
-      resourceQuota: # limit for aggregate resource consumption in the namespace
-        requestsCpu: "2"
-      gitJob:
-        enabled: true
-        githubSshSecret: ssh-secret
-        repoUrl: "git@github.com:pflege-de/awscli-kubectl.git"
-        branch: main
-    repo: https://pflege-de.github.io/k8s-namespace-defaults
-    releaseName: namespace-defaults
-    version: 2.0.1
+- name: namespace-defaults
+  releaseName: namespace-defaults
+  repo: https://pflege-de.github.io/k8s-namespace-defaults
+  valuesInline:
+    ecrJob:
+      enabled: true
+    gitJob:
+      branch: main
+      enabled: true
+      githubSshSecret: ssh-secret
+      repoUrl: git@github.com:pflege-de/awscli-kubectl.git
+    namespace: ecr-helm
+    resourceQuota:
+      requestsCpu: "2"
+  version: 2.0.1
+labels:
+- includeSelectors: true
+  pairs:
+    app.kubernetes.io/component: service
+    app.kubernetes.io/instance: ns-default-test
+    app.kubernetes.io/managed-by: argocd
+    app.kubernetes.io/part-of: ns-default-test
