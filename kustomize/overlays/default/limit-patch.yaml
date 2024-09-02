@@ -1,0 +1,3 @@
+- op: replace #action 
+  path: /spec:/limits/default/cpu: #resource spec we want to change
+  value: 1000 #value we want to use for patching 
